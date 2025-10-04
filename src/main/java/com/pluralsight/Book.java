@@ -59,24 +59,29 @@ public class Book {
     // *** Methods ***
     // Check a book out.
     public void checkOut(String name) {
-        if (!name.isEmpty()) {
-            this.checkedOutTo = name;
-            this.isCheckedOut = true;
-        }
-
-        else {
-            System.out.println("Please enter a name to check out a book.");
-        }
+        this.checkedOutTo = name;
+        this.isCheckedOut = true;
     }
 
     // Check a book back in.
     public void checkIn() {
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
+    }
 
+    // Display book data: id, isbn, title, isCheckedOut.
+    public void bookData() {
+        System.out.println(id + ", " + isbn + ", " + title + ", " + isCheckedOut);
     }
 
     // Display book data: id, isbn, title.
-    public void bookData() {
+    public void availableBookData() {
         System.out.println(id + ", " + isbn + ", " + title);
+    }
+
+    // Display book data: id, isbn, title, checkedOutTo.
+    public void unavailableBookData() {
+        System.out.println(id + ", " + isbn + ", " + title + ", " + checkedOutTo);
     }
 
     // *** Overrides ***
