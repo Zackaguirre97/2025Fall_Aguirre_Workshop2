@@ -32,10 +32,5 @@ public class Main {
 
         // Using the above library of books, create a new menu.
         Menu menu = new Menu(library);
-
-        // *** Variables ***
-
-
-        // *** Menu
     }
 };
