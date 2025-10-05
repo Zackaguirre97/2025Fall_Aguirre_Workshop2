@@ -159,6 +159,7 @@ public class Menu {
                             // Check the book back in.
                             if (library.checkInBook(id)) {
                                 System.out.println("Confirmation: Book has been checked in!");
+                                break;
                             }
                         }
                         // Display error message.
