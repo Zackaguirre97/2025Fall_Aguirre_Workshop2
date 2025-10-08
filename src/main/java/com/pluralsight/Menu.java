@@ -11,13 +11,13 @@ public class Menu {
         System.out.println("X. Exit");
     }
 
-    // Loop to prompt the user checkout a book or return to the main menu.
+    // Loop to prompt the user to checkout a book or return to the main menu.
     public static void checkOutMenu() {
         System.out.println("\n----- Book Check Out -----");
         System.out.println("Please enter a Book ID to check out a book, or X to go back to the main menu: ");
     }
 
-    // Loop to prompt the user checkout a book or return to the main menu.
+    // Loop to prompt the user to checkin a book or return to the main menu.
     public static void checkInMenu() {
         System.out.println("\n----- Options -----");
         System.out.println("C. Check in a Book");
