@@ -1,5 +1,9 @@
 package com.pluralsight;
 
+import java.io.*;
+import java.nio.Buffer;
+import java.util.*;
+
 public class Library {
     // *** Properties ***
     private Book[] library;
@@ -63,6 +67,18 @@ public class Library {
     }
 
     // * Display the checked out books
+    public boolean bookIdCheckedOut(int id) {
+        boolean checkedOut = false;
+        for (Book book : library) {
+            if (book.getId() == id && book.isCheckedOut()) {
+                checkedOut = true;
+                break;
+            }
+        }
+        return checkedOut;
+    }
+
+    // * Display the checked out books
     public boolean checkOutBook(int id, String name) {
         for (Book book : library) {
             if (book.getId() == id) {
@@ -82,5 +98,22 @@ public class Library {
             }
         }
         return false;
+    }
+
+    public void retrieveLibraryFromFile() {
+        try {
+            System.out.println("Hello World");
+        }
+        catch (Exception e) {
+            System.out.println("Uh oh...");
+        }
+    }
+
+    public void saveLibraryToFile() {
+        try {
+            System.out.println("Hello World");
+        } catch (Exception e) {
+            System.out.println("Uh oh...");
+        }
     }
 }
