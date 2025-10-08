@@ -54,7 +54,7 @@ public class Library {
         }
     }
 
-    // * Display the checked out books
+    // * Loop through all the books in the library, check their id's, if an id mathces the passed id to find, set found to true.
     public boolean bookIdFound(int id) {
         boolean found = false;
         for (Book book : library) {
@@ -66,7 +66,7 @@ public class Library {
         return found;
     }
 
-    // * Display the checked out books
+    // * Loop through all the books in the library, check their id's & if they are checked out, if both conditions are true, set checkedOut to true.
     public boolean bookIdCheckedOut(int id) {
         boolean checkedOut = false;
         for (Book book : library) {
@@ -78,7 +78,7 @@ public class Library {
         return checkedOut;
     }
 
-    // * Display the checked out books
+    // * Loop through all the books in the library, search for the book whos id matches the id passed, if found- checkout the book.
     public boolean checkOutBook(int id, String name) {
         for (Book book : library) {
             if (book.getId() == id) {
@@ -89,7 +89,7 @@ public class Library {
         return false;
     }
 
-    // * Display the checked in books
+    // * Loop through all the books in the library, search for the book whos id matches the id passed, if found- checkin the book.
     public boolean checkInBook(int id) {
         for (Book book : library) {
             if (book.getId() == id) {
@@ -100,6 +100,7 @@ public class Library {
         return false;
     }
 
+    // Retrieve the stored copy of the file.
     public void retrieveLibraryFromFile() {
         try {
             System.out.println("Hello World");
@@ -109,6 +110,7 @@ public class Library {
         }
     }
 
+    // Copy the current version of the library to the storage file for persistence of data when the app is run again.
     public void saveLibraryToFile() {
         try {
             System.out.println("Hello World");
